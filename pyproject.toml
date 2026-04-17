@@ -22,17 +22,14 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Topic ::n    "pytest>=7.0",
+    "Topic :: Text Processing :: Markup ::0",
+]
+dev = [
+    "pytest>=7.0",
     "pytest-cov>=4.0",
     "pre-commit>=3.0",
     "black>=23.0",
     "ruff>=0.1.0",
-]
-
-[project.optional-dependencies]
-audio = [
-    "openai>=1.0.0",
-    "pydub>=0.25.0",
 ]
 
 [project.scripts]
