@@ -26,18 +26,7 @@ classifiers = [
 ]
 dependencies = [
     "beautifulsoup4>=4.11.0",
-    "requests>=2.28.0",
-    "mammoth>=1.6.0",
-    "markdownify>=0.11.0",
-    "openpyxl>=3.1.0",
-    "python-pptx>=0.6.21",
-    "python-docx>=0.8.11",
-    "chardet>=5.0.0",
-]
-
-[project.optional-dependencies]
-dev = [
-    "pytest>=7.0",
+    "requests>=2.28.0",    "pytest>=7.0",
     "pytest-cov>=4.0",
     "pre-commit>=3.0",
     "black>=23.0",
@@ -63,10 +52,14 @@ packages = ["src/markitdown"]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_classes = ["Test*"]
-python_functions = ["test_.black]
+python_functions = ["test_*"]
+
+[tool.black]
 line-length = 88
 target-version = ["py39"]
-nline-length = 88
+
+[tool.ruff]
+line-length = 88
 target-version = "py39"
 select = ["E", "F", "I", "W"]
 ignore = ["E501"]
